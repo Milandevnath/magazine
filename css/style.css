@@ -1,4 +1,12 @@
-
+html, body {
+ 	background: url("../img/techbg3.png") no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   overflow: hidden;
+   height: 100%;  /* body hight 100% to make contain zize ( center white box) equal 100%*/
+}
 #maga-re{
 	background: #1f232b;
 	width: 100%;
@@ -12,8 +20,77 @@
 	width:100%;
 	height: 100%;
 	z-index: 33;
+	overflow-x: hidden;
+	 overflow-y: scroll;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 30px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+	 height: 30px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	 height: 30px;
+	background: rgba(255,0,0,0.4); 
+}
+
+#maga-con{
+	
+	  background: rgb(255, 254, 254);
+	  height: 100% ;
+	  margin-top: 100px;
+	  overflow: hidden;
+	  z-index: 8;
 	
 }
-	
-
-
+#maga-cir{
+  border-radius: 50%;
+  background-color: rgb(31, 35, 43);
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  width: 184px;
+  height: 184px;
+  z-index: 11;
+}
+#maga-cir-1{
+  font-size: 33.333px;
+  font-family: "Arial";
+  color: rgb(255, 231, 0);
+  font-weight: bold;
+  line-height: 5.1;
+  text-align: center;
+  -moz-transform: matrix( 3.69605769100149,0,0,3.6960576910015,0,0);
+  -webkit-transform: matrix( 3.69605769100149,0,0,3.6960576910015,0,0);
+  -ms-transform: matrix( 3.69605769100149,0,0,3.6960576910015,0,0);
+ /* position: relative;*/
+  left: 436.5px;
+  top: 139.5px;
+  z-index: 19;
+}
+.maga-heig{
+	height:100%;
+}
+.maga-btn{
+	background: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	font-size:20px;
+	border: 0px;
+	border-radius: 10px;	
+}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>DeveChakra Magazine</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,8 @@
     <![endif]-->
   </head>
   <body>
-  		<div id="wrapper">
+  		<div id="wrapper" class="maga-heig">
+  			<!-- slidbar -->
   			<div id="sidebar-wrapper">
   				<!-- about reporter -->
   					<div id="maga-re" >
@@ -32,10 +33,74 @@
   				
   				<!-- topic -->
   				<div id="maga-topic">
-  				<p>milan</p>
+  					<ol>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  						<li>name of the topic</li>
+  					</ol>
+  				
   				</div>
   				<!-- / topic -->
   			</div>
+  			<!-- /#slider -->
+  			 <!-- Page Content -->
+        <div id="page-content-wrapper" class="maga-heig">
+            <div class="container-fluid maga-heig" >
+            	<!-- navigation -->
+            	<nav style="float: right; padding-right: 50px;">
+            		<button class="btn btn-default maga-btn" type="button" >cover page</button>
+            		<button class="btn btn-default maga-btn" type="button" >contact us</button>
+            	</nav>
+            	<!-- /# navigation -->
+            	
+                <div class="row" style="height: 100%; ">
+                	
+                	<!-- circlar div -->
+                	<div id="maga-cir">
+                		<p id="maga-cir-1">1</p>
+                	</div>
+                	<!-- /#circular  div -->
+                    <div class="col-sm-12 col-lg-10 col-lg-offset-1" id="maga-con">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
   		
   		</div>
 		

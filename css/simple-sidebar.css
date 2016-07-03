@@ -3,19 +3,10 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-html, body {
- 	background: url("../img/techbg3.png") no-repeat center center fixed; 
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   overflow-x: hidden;
- }
+
+
 
 /* Toggle Styles */
- /*my style code */
-
- /* end of my code*/
 
 #wrapper {
     padding-left: 0;
@@ -36,14 +27,12 @@ html, body {
     width: 0;
     height: 100%;
     margin-left: -250px;
-    overflow-y: auto;
-    background: #000000;
+    overflow:hidden;
+    background: #000;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    padding: 0px;
-    overflow: hidden;
 }
 
 #wrapper.toggled #sidebar-wrapper {
