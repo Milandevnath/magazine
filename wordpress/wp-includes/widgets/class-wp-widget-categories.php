@@ -95,11 +95,13 @@ class WP_Widget_Categories extends WP_Widget {
 	dropdown.onchange = onCatChange;
 })();
 /* ]]> */
+
 </script>
 
 <?php
 		} else {
 ?>
+		
 		<ul>
 <?php
 		//$cat_args['title_li'] = '';

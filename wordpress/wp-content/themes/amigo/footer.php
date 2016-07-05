@@ -1,3 +1,8 @@
+				        <div class="chipku" data-toggle="offcanvas">
+				          <p class="" >
+				            Toggle&nbsp;nav...............
+				          </p>
+				          </div>
 <footer id="colophon" class="rsrc-footer" role="contentinfo">
    <div class="row rsrc-author-credits">
      <p class="text-center"><?php printf( __( 'Created by %1$s.', 'amigo' ), '<a href="'.esc_url("http://themes4wp.com").'">Themes4WP</a>' ); ?></p>

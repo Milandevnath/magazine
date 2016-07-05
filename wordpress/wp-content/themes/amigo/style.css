@@ -12,7 +12,56 @@ Text Domain: amigo
 
 */
 
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ * Greater thav 768px shows the menu by default and also flips the semantics
+ * The issue is to show menu for large screens and to hide for small
+ * Also need to do something clever to turn off the tabs for when the navigation is hidden
+ * Otherwise keyboard users cannot find the focus point
+ * (For now I will ignore that for mobile users and also not worry about
+ * screen re-sizing popping the menu out.)
+ */
+
 /* The bootstrap.css file is auto-enqueued in functions.php */
+
+.chipku
+{
+    position:fixed;
+    top:300px;
+    left: 0px;
+    padding:0px;
+    margin:0px;
+    width: 40px;
+    height:160px;
+    background:#FF931E;
+    z-index:15;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.chipku img
+{
+    margin: 15px 0px 45px 13px;
+}
+
+.chipku p
+{
+    color: #fff;
+    -moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.chipku:HOVER
+{
+   background-color: gray;
+}
+
+
 
  #categories-3{
 	overflow-y: auto;
@@ -41,6 +90,10 @@ Text Domain: amigo
 .rsrc-main {
     padding: 0;
     position: relative;
+}
+.rsrc-main.active {
+    width:100%;
+    
 }
 .rsrc-main .woocommerce {
     padding: 5%;
