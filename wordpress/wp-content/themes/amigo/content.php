@@ -1,3 +1,4 @@
+<!--<div class="col-md-4">   Added by Sirus for 3 content page View at homepage -->
 <article> 
 <div <?php post_class(); ?>> 
   <div class="home-thumbnail">
@@ -14,11 +15,13 @@
   </div>
   <div class="home-header"> 
   <header>
-  <h2 class="page-header">                                
+  <div class="page-header"><!-- Edited by Sirus made this new div and pushed class from h2 to this div -->
+  <h2 >                                
     <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'amigo' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
       <?php the_title(); ?>
     </a>                            
   </h2> 
+  </div>
   <?php get_template_part('template-part', 'postmeta'); ?>
   </header>                                                      
   <div class="entry-summary">
@@ -42,6 +45,7 @@
 </div>
 <div class="clear"></div>
 </article>
+<!--  </div>-->
 <?php if( $wp_query->current_post == 0 && is_active_sidebar( 'amigo-post-area' )) { ?>
   	<div class="first-textarea">
        <?php dynamic_sidebar( 'amigo-post-area' ); ?>
