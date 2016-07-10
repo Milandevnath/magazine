@@ -6,7 +6,6 @@ jQuery(document).ready(function () {
   });
 });
 
-
 // menu dropdown link clickable
 ( function ( $ ) {
     "use strict";
