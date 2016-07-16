@@ -138,7 +138,7 @@ class WP_Widget_Categories extends WP_Widget {
 						 $catPost = get_posts('category='.$catid.'&posts_per_page=-1'); //change this ?>
 						 
 						 <?php foreach ($catPost as $post) : setup_postdata($post) ?>
-						<?php   echo '<h3>'; ?>
+						<?php   echo '<div class="wid"><h3>'; ?>
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								<?php 
 								echo '</h3>';
@@ -149,7 +149,7 @@ class WP_Widget_Categories extends WP_Widget {
 								the_date();
 								//echo '</p><p>Categories: ';
 								//the_category(', ');
-								echo '</p><hr />' ;      ?>
+								echo '</p></div><hr />' ;      ?>
 						<?php endforeach; echo "End of Contents";
 						
 						
@@ -190,7 +190,7 @@ class WP_Widget_Categories extends WP_Widget {
 						<?php if ( ! empty( $prevID ) ): ?>
 						    <div class="alignleft">
 						        <a href="<?php echo get_permalink( $prevID ); ?>" alt="<?php echo get_the_title( $prevID ); ?>">
-						            <?php _e( 'Previous', 'textdomain' ); ?>
+						            <?php //_e( 'Previous', 'textdomain' ); ?>
 						        </a>
 						    </div>
 						<?php endif;
@@ -198,7 +198,7 @@ class WP_Widget_Categories extends WP_Widget {
 						if ( ! empty( $nextID ) ) : ?>
 						    <div class="alignright">
 						        <a href="<?php echo get_permalink( $nextID ); ?>" alt="<?php echo get_the_title( $nextID ); ?>">
-						            <?php _e( 'Next', 'textdomain' ); ?>
+						            <?php// _e( 'Next', 'textdomain' ); ?>
 						        </a>
 						    </div>
 						<?php endif; ?>

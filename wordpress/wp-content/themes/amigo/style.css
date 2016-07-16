@@ -25,6 +25,12 @@ Text Domain: amigo
  */
 
 /* The bootstrap.css file is auto-enqueued in functions.php */
+.wid {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-bottom: 1px;
+    padding-left: 14px;
+    padding-top: 1px;
+}
 .chipku
 {
     position:fixed;
@@ -33,7 +39,7 @@ Text Domain: amigo
     padding:0px;
     width: 40px;
     height:160px;
-    background-color:rgba(255,255,0,0.3);
+    background-color:rgba(192,192,192,0.3); 
     z-index:15;
     border-radius: 3px 0px 0px 3px;
 }
@@ -57,7 +63,7 @@ Text Domain: amigo
 
 .chipku:HOVER
 {
-   background-color:rgba(192,192,192,0.3);
+   background-color:rgba(255, 128, 0,0.3);
 }
 
 
@@ -71,7 +77,7 @@ Text Domain: amigo
 	z-index: 9;
 	display: none;
 	box-shadow: 10px 10px 5px #888888;
-
+    background-color: rgba(255, 255, 51 , 0.9);
 } 
 
 .rsrc-header {
@@ -477,7 +483,7 @@ h2.site-desc, h3.site-desc {
 }
 /* Widget */
 h3.widget-title {
-    font-size: 16px;
+    font-size: 20px;
     color: #3d3d3d;
     letter-spacing: 2px;
     text-transform: uppercase;
