@@ -95,13 +95,11 @@ class WP_Widget_Categories extends WP_Widget {
 	dropdown.onchange = onCatChange;
 })();
 /* ]]> */
-
 </script>
 
 <?php
 		} else {
 ?>
-		
 		<ul>
 <?php
 		//$cat_args['title_li'] = '';
@@ -151,10 +149,6 @@ class WP_Widget_Categories extends WP_Widget {
 								//the_category(', ');
 								echo '</p><hr />' ;      ?>
 						<?php endforeach; echo "End of Contents";
-						
-						
-						
-						
 						wp_reset_postdata();
 						?>
 			<?php 	}  
@@ -167,43 +161,60 @@ class WP_Widget_Categories extends WP_Widget {
 		//wp_list_categories( apply_filters( 'widget_categories_args', $cat_args ) );
 ?>
 
-<?php 
-						$post_list = get_posts( array(
-								
-								'orderby'    => 'menu_order',
-								'sort_order' => 'asc'
-						) );
-						
-						$posts = array();
-						
-						foreach ( $post_list as $post ) {
-							$posts[] += $post->ID;
-						}
-						
-						$current = array_search( get_the_ID(), $posts );
-						
-						$prevID = $posts[ $current-1 ];
-						$nextID = $posts[ $current+1 ];
-						?>
-						 
-						<div class="navigation">
-						<?php if ( ! empty( $prevID ) ): ?>
-						    <div class="alignleft">
-						        <a href="<?php echo get_permalink( $prevID ); ?>" alt="<?php echo get_the_title( $prevID ); ?>">
-						            <?php _e( 'Previous', 'textdomain' ); ?>
-						        </a>
-						    </div>
-						<?php endif;
-						 
-						if ( ! empty( $nextID ) ) : ?>
-						    <div class="alignright">
-						        <a href="<?php echo get_permalink( $nextID ); ?>" alt="<?php echo get_the_title( $nextID ); ?>">
-						            <?php _e( 'Next', 'textdomain' ); ?>
-						        </a>
-						    </div>
-						<?php endif; ?>
-						</div><!-- .navigation -->
+
+
+ <?php   //$my_query4 = new WP_Query('cat=2'); ?>
+ <?php //while ($my_first_category_query->have_posts()) : $my_first_category_query->the_post(); ?>
+ <?php global $post;global $wp_query;
+ $catid = $wp_query->get_queried_object_id();
+ //echo get_cat_ID( $post->post_title );
+ echo $catid;
+ $catPost = get_posts('category='.$catid.'&posts_per_page=-1'); //change this 
+ echo get_cat_name( $catid );
+ ?>
  
+ <?php foreach ($catPost as $post) : setup_postdata($post) ?>
+<?php   echo '<h1>'; ?>
+		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		<?php 
+		echo '</h1>';
+		//the_excerpt();
+		echo ' <p class="postinfo">Written by: ';
+		the_author_posts_link();
+		echo '</p><p>Posted on ';
+		the_date();
+		//echo '</p><p>Categories: ';
+		//the_category(', ');
+		echo '</p>'        ?>
+<?php endforeach; 
+wp_reset_postdata();
+?>
+
+    <?php
+    global $post;global $wp_query;
+ $catid = $wp_query->get_queried_object_id();
+ //echo get_cat_ID( $post->post_title );
+ //echo $catid;
+ echo get_cat_name( $catid );
+    $myposts = get_posts( array(
+        'posts_per_page' => -1,
+        'offset'         => 1,
+        'category'       => $catid
+    ) );
+ 
+    if ( $myposts ) {
+        foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+            <li>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </li>
+        <?php
+        endforeach; 
+        wp_reset_postdata();
+    }
+    ?>
+    
+
+
 
 		</ul>
 <?php

@@ -1,3 +1,11 @@
+jQuery(document).ready(function () {
+	jQuery('[data-toggle=offcanvas]').click(function () {
+		//jQuery('#category-3').toggleClass('active');
+        jQuery('.widget').toggle();
+        jQuery('.rsrc-main').toggleClass('active');
+  });
+});
+
 // menu dropdown link clickable
 ( function ( $ ) {
     "use strict";
