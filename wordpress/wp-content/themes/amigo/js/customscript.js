@@ -6,6 +6,27 @@ jQuery(document).ready(function () {
   });
 });
 
+jQuery(document).ready(function(){
+	jQuery(window).scroll(function(){
+		 var x = jQuery(".rsrc-content").position();
+        if(jQuery(window).scrollTop()>x.top){
+        	jQuery("#categories-3").css("top", "0px");
+        } 
+        else{
+        	jQuery("#categories-3").css("top", "auto");
+        }
+    });
+	
+	jQuery(".chipku").click(function(){
+           
+		   jQuery(".t1").toggle();
+		   jQuery(".t2").toggle();
+		
+	});
+});
+
+
+
 // menu dropdown link clickable
 ( function ( $ ) {
     "use strict";

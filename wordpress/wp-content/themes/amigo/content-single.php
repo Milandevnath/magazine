@@ -4,7 +4,7 @@
   
   <?php //left sidebar ?>    
   <?php get_sidebar( 'left' ); ?>    
-   <article class="col-md-<?php amigo_main_content_width(); ?> rsrc-main">        
+   <article class="col-md-<?php amigo_main_content_width(); ?> rsrc-main active">        
     <?php // theloop
             if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>                         
     <div <?php post_class('rsrc-post-content'); ?>>                            
